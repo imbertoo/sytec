@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYTEC | Cerrajero en Gijón y Asturias | Cerrajero Urgencias 24 horas</title>
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts - Tipografías sans-serif modernas y limpias -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVEGACIÓN STICKY - Moderna y minimalista -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#hero">
+                <img src="https://www.sytec.es/wp-content/uploads/2020/02/sytec-alargao-pequeo-blanco.png" alt="SYTEC Logo" class="logo">
+            </a>
+            
+            <!-- Toggle button para móviles -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Menú de navegación -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Empresa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#urgencias">Urgencias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#marcas">Marcas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary btn-cta" href="tel:984397843">
+                            <i class="bi bi-telephone-fill me-2"></i>984 39 78 43
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION - Con overlay moderno y diseño impactante -->
+    <section id="hero" class="hero-section">
+        <!-- Imagen de fondo con overlay -->
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="container hero-content">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-10 mx-auto text-center">
+                    <!-- Etiqueta pequeña superior -->
+                    <span class="hero-badge fade-in-up" data-delay="0">
+                        Bienvenidos a SYTEC
+                    </span>
+                    
+                    <!-- Título principal -->
+                    <h1 class="hero-title fade-in-up" data-delay="200">
+                        Servicios Profesionales de Cerrajería
+                    </h1>
+                    
+                    <!-- Subtítulo -->
+                    <p class="hero-subtitle fade-in-up" data-delay="400">
+                        24 horas en Gijón, Oviedo y Avilés (Asturias)
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="hero-cta fade-in-up" data-delay="600">
+                        <a href="tel:984397843" class="btn btn-lg btn-primary me-3 mb-3">
+                            <i class="bi bi-telephone-fill me-2"></i>984 39 78 43
+                        </a>
+                        <a href="#servicios" class="btn btn-lg btn-outline-light mb-3">
+                            Ver Servicios
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator fade-in-up" data-delay="1000">
+                <a href="#intro">
+                    <i class="bi bi-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRODUCCIÓN - Texto explicativo -->
+    <section id="intro" class="intro-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <!-- Badge de título -->
+                    <div class="text-center mb-5 animate-on-scroll">
+                        <span class="section-badge">Cerrajería Profesional 24/7</span>
+                        <h2 class="section-title mt-3">
+                            24 Horas de Cerrajería y Servicios de Seguridad
+                        </h2>
+                        <div class="section-divider mx-auto"></div>
+                    </div>
+                    
+                    <!-- Contenido en cards -->
+                    <div class="row g-4">
+                        <div class="col-md-12 animate-on-scroll" data-delay="100">
+                            <div class="intro-card">
+                                <p class="intro-text">
+                                    ¿Necesitas encontrar al mejor cerrajero en Gijón, Oviedo o Avilés? En ese caso confía en Sytec.es, 
+                                    especialistas en todo lo relacionado con aperturas y cierres. Tras muchos años de trayectoria en este sector, 
+                                    podemos afirmar que hemos ofrecido a todos nuestros clientes el servicio más completo y personalizado posible, 
+                                    resolviendo cualquier duda que pudieran tener.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 animate-on-scroll" data-delay="200">
+                            <div class="intro-card h-100">
+                                <div class="intro-icon">
+                                    <i class="bi bi-shield-check"></i>
+                                </div>
+                                <h3>Expertos en Seguridad</h3>
+                                <p>
+                                    Somos grandes expertos en cualquier trabajo que signifique abrir y cerrar. 
+                                    ¿Te has olvidado las llaves de tu hogar en el interior? No hay problema. 
+                                    ¿Necesitas cambiar la cerradura de tu puerta? Estamos a tu entera disposición.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 animate-on-scroll" data-delay="300">
+                            <div class="intro-card h-100">
+                                <div class="intro-icon">
+                                    <i class="bi bi-clock-history"></i>
+                                </div>
+                                <h3>Disponibles 24/7</h3>
+                                <p>
+                                    Aperturas de puertas, cambios de cilindro o cerradura, copia de cualquier tipo de llaves, 
+                                    apertura de vehículos… Trabajamos tanto con particulares como con empresas. 
+                                    Servicios de emergencia disponibles las 24 horas, incluidos fines de semana y festivos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="text-center mt-5 animate-on-scroll" data-delay="400">
+                        <a href="#servicios" class="btn btn-primary btn-lg me-3">
+                            <i class="bi bi-list-check me-2"></i>Nuestros Servicios
+                        </a>
+                        <a href="#contacto" class="btn btn-outline-primary btn-lg">
+                            <i class="bi bi-envelope me-2"></i>Contacto
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS SECTION - Cards modernas con iconos -->
+    <section id="servicios" class="servicios-section py-5">
+        <div class="container">
+            <!-- Título de sección -->
+            <div class="text-center mb-5 animate-on-scroll">
+                <span class="section-badge">Lo que hacemos</span>
+                <h2 class="section-title mt-3">Nuestros Servicios de Cerrajería</h2>
+                <div class="section-divider mx-auto"></div>
+            </div>
+            
+            <!-- Grid de servicios -->
+            <div class="row g-4">
+                <!-- Servicio 1: Domicilios Particulares -->
+                <div class="col-lg-6 animate-on-scroll" data-delay="100">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+                        <h3 class="service-title">Domicilios Particulares</h3>
+                        <p class="service-description">
+                            Cilindros de seguridad, Puertas acorazadas certificadas, Mantenimiento de comunidades.
+                        </p>
+                        <ul class="service-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Cilindros de seguridad</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Puertas acorazadas certificadas</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Mantenimiento de comunidades</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Cambio de cerraduras</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-outline-primary mt-3">
+                            Ver más <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Servicio 2: Empresas y Negocios -->
+                <div class="col-lg-6 animate-on-scroll" data-delay="200">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="bi bi-shop"></i>
+                        </div>
+                        <h3 class="service-title">Empresas y Negocios</h3>
+                        <p class="service-description">
+                            Cajas fuertes, Control de acceso, Amaestramiento de cilindros, Muelles cierrapuertas.
+                        </p>
+                        <ul class="service-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Cajas fuertes</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Control de acceso</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Amaestramiento de cilindros</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Muelles cierrapuertas</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-outline-primary mt-3">
+                            Ver más <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Servicio 3: Cerrajeros de Automoción -->
+                <div class="col-lg-6 animate-on-scroll" data-delay="300">
+                    <div class="service-card h-100">
+                        <div class="service-icon">
+                            <i class="bi bi-car-front"></i>
+                        </div>
+                        <h3 class="service-title">Cerrajeros de Automoción</h3>
+                        <p class="service-description">
+                            Perdida total de llaves de coche o moto, Llaves de coche, Reparación de llaves y carcasas de telemandos.
+                        </p>
+                        <ul class="service-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Pérdida total de llaves</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Llaves de coche y moto</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Reparación de telemandos</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Apertura de vehículos</li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-outline-primary mt-3">
+                            Ver más <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Servicio 4: Cerrajeros de Urgencia -->
+                <div class="col-lg-6 animate-on-scroll" data-delay="400">
+                    <div class="service-card service-card-featured h-100">
+                        <div class="featured-badge">24/7</div>
+                        <div class="service-icon">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+                        <h3 class="service-title">Cerrajeros de Urgencia</h3>
+                        <p class="service-description">
+                            Aperturas, Cambio de cilindros, Cambio de cerraduras, Copia de llaves, Apertura de vehículos.
+                        </p>
+                        <ul class="service-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Aperturas urgentes</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Cambio de cilindros</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Cambio de cerraduras</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Copia de llaves</li>
+                        </ul>
+                        <a href="tel:984397843" class="btn btn-primary mt-3">
+                            Llamar ahora <i class="bi bi-telephone-fill ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- URGENCIAS DESTACADO - Call to action para emergencias -->
+    <section id="urgencias" class="urgencias-section py-5">
+        <div class="container">
+            <div class="urgencias-card animate-on-scroll">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <div class="urgencias-icon mb-3">
+                            <i class="bi bi-exclamation-triangle-fill"></i>
+                        </div>
+                        <h2 class="urgencias-title">¿Necesitas ayuda urgente?</h2>
+                        <p class="urgencias-text mb-0">
+                            Servicio de cerrajería de emergencia las 24 horas, los 7 días de la semana. 
+                            Te atendemos en Gijón, Oviedo y Avilés en minutos.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                        <a href="tel:984397843" class="btn btn-light btn-lg">
+                            <i class="bi bi-telephone-fill me-2"></i>984 39 78 43
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARCAS SECTION - Logos de marcas con las que trabajan -->
+    <section id="marcas" class="marcas-section py-5">
+        <div class="container">
+            <!-- Título de sección -->
+            <div class="text-center mb-5 animate-on-scroll">
+                <span class="section-badge">Confianza y calidad</span>
+                <h2 class="section-title mt-3">Trabajamos con las Mejores Marcas</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="section-subtitle mt-3">
+                    Solo trabajamos con los principales fabricantes del mercado. Nuestros técnicos de cerrajería 
+                    proporcionan una amplia gama de soluciones de seguridad, adecuado tanto para pequeños negocios, 
+                    grandes oficinas, colegios o institutos o de organización de empresas industriales.
+                </p>
+            </div>
+            
+            <!-- Grid de logos de marcas -->
+            <div class="marcas-grid animate-on-scroll" data-delay="200">
+                <div class="marca-item">
+                    <img src="https://www.sytec.es/wp-content/uploads/2020/02/atrium.jpg" alt="Atrium" class="marca-logo">
+                </div>
+                <div class="marca-item">
+                    <img src="https://www.sytec.es/wp-content/uploads/2020/02/cdvi.png" alt="CDVI" class="marca-logo">
+                </div>
+                <div class="marca-item">
+                    <img src="https://www.sytec.es/wp-content/uploads/2020/02/keso.png" alt="Keso" class="marca-logo">
+                </div>
+                <div class="marca-item">
+                    <img src="https://www.sytec.es/wp-content/uploads/2020/02/kiuso.jpg" alt="Kiuso" class="marca-logo">
+                </div>
+                <div class="marca-item">
+                    <img src="https://www.sytec.es/wp-content/uploads/2020/02/olle.png" alt="Olle" class="marca-logo">
+                </div>
+                <div class="marca-item">
+                    <img src="https://www.sytec.es/wp-content/uploads/2020/02/sts.jpg" alt="STS" class="marca-logo">
+                </div>
+                <div class="marca-item">
+                    <img src="https://www.sytec.es/wp-content/uploads/2020/02/tesa.gif" alt="Tesa" class="marca-logo">
+                </div>
+                <div class="marca-item">
+                    <img src="https://www.sytec.es/wp-content/uploads/2020/02/tjss.png" alt="TJSS" class="marca-logo">
+                </div>
+                <div class="marca-item">
+                    <img src="https://www.sytec.es/wp-content/uploads/2020/02/winkhaus.png" alt="Winkhaus" class="marca-logo">
+                </div>
+                <div class="marca-item">
+                    <img src="https://www.sytec.es/wp-content/uploads/2020/02/yale.png" alt="Yale" class="marca-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION - "Un cerrajero en quien puede confiar" -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Imagen -->
+                <div class="col-lg-5 animate-on-scroll">
+                    <div class="about-image">
+                        <img src="https://www.sytec.es/wp-content/uploads/2020/02/SYTEC-ESCAPARATE.png" 
+                             alt="SYTEC Escaparate" 
+                             class="img-fluid rounded-4 shadow-lg">
+                    </div>
+                </div>
+                
+                <!-- Contenido -->
+                <div class="col-lg-7 animate-on-scroll">
+                    <span class="section-badge">Sobre nosotros</span>
+                    <h2 class="section-title mt-3 mb-4">Un Cerrajero en Quien Puede Confiar</h2>
+                    <div class="section-divider mb-4"></div>
+                    
+                    <h4 class="about-subtitle">El mejor servicio de cerrajero en Gijón, Oviedo y Avilés.</h4>
+                    
+                    <p class="about-text">
+                        Uno de nuestros principales secretos es ofrecer a todos nuestros clientes una atención completa 
+                        y profesional, independientemente que estemos hablando de empresas o particulares. Solamente de 
+                        esta manera nos hemos podido convertir en una referencia en el sector de la cerrajería.
+                    </p>
+                    
+                    <p class="about-text">
+                        Abarcamos absolutamente todos los campos. En domicilios particulares realizamos cambios de cilindros, 
+                        instalaciones de puertas acorazadas certificadas o mantenimiento de comunidades. Llevaremos a cabo 
+                        cualquier atención que requieras de manera rápida y eficaz. En Sytec.es buscamos tu máxima satisfacción.
+                    </p>
+                    
+                    <p class="about-text">
+                        A nivel empresarial, nuestro personal es especialista en la instalación de todo tipo de cajas fuertes, 
+                        controles de acceso o amaestramiento de cilindros. Servicios realmente valorados por nuestros clientes 
+                        para aumentar la seguridad en sus recintos.
+                    </p>
+                    
+                    <div class="about-features mt-4">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="bi bi-shield-check"></i>
+                                    <span>Profesionales certificados</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="bi bi-clock"></i>
+                                    <span>Servicio 24/7</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="bi bi-tools"></i>
+                                    <span>Equipamiento moderno</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span>Años de experiencia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contacto" class="btn btn-primary btn-lg mt-4">
+                        Solicitar presupuesto <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS ADICIONALES - Lista detallada -->
+    <section class="servicios-adicionales-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="text-center mb-5 animate-on-scroll">
+                        <span class="section-badge">Servicios completos</span>
+                        <h2 class="section-title mt-3">Todo lo que Necesitas en Cerrajería</h2>
+                        <div class="section-divider mx-auto"></div>
+                    </div>
+                    
+                    <div class="row g-4">
+                        <!-- Servicio emergencia 24h -->
+                        <div class="col-md-6 animate-on-scroll" data-delay="100">
+                            <div class="servicio-adicional-card">
+                                <div class="servicio-adicional-icon">
+                                    <i class="bi bi-bell-fill"></i>
+                                </div>
+                                <h4>Servicio de Emergencia 24/7</h4>
+                                <p>
+                                    ¿Te has olvidado las llaves de tu casa dentro? ¿Se bloqueó tu coche con las llaves en su interior? 
+                                    ¿Perdiste tus llaves de casa? Podemos abrir la puerta de su automóvil, piso u oficina, arreglar 
+                                    cualquier daño y reemplazar las cerraduras.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Servicios automóviles -->
+                        <div class="col-md-6 animate-on-scroll" data-delay="200">
+                            <div class="servicio-adicional-card">
+                                <div class="servicio-adicional-icon">
+                                    <i class="bi bi-key-fill"></i>
+                                </div>
+                                <h4>Servicios de Automóviles</h4>
+                                <p>
+                                    Servicio de bloqueo de automóviles, problemas de encendido, reemplazo y copia de llaves de automóviles, 
+                                    duplicación de llaves y más. Trabajamos con todas las marcas y modelos.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Cerraduras comerciales -->
+                        <div class="col-md-6 animate-on-scroll" data-delay="300">
+                            <div class="servicio-adicional-card">
+                                <div class="servicio-adicional-icon">
+                                    <i class="bi bi-lock-fill"></i>
+                                </div>
+                                <h4>Cerraduras Comerciales y Residenciales</h4>
+                                <p>
+                                    Instalación de una nueva cerradura, rekey de la cerradura, cambio de la cerradura y reparación de la cerradura. 
+                                    Le ayudaremos a elegir la cerradura correcta según sus necesidades y presupuesto.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Duplicación llaves -->
+                        <div class="col-md-6 animate-on-scroll" data-delay="400">
+                            <div class="servicio-adicional-card">
+                                <div class="servicio-adicional-icon">
+                                    <i class="bi bi-files"></i>
+                                </div>
+                                <h4>Duplicación/Copia de Llaves</h4>
+                                <p>
+                                    Nuestros servicios de duplicación de llaves cubren todas las principales marcas de cerraduras. 
+                                    Realizamos copias con precisión y rapidez.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Puertas -->
+                        <div class="col-md-6 animate-on-scroll" data-delay="500">
+                            <div class="servicio-adicional-card">
+                                <div class="servicio-adicional-icon">
+                                    <i class="bi bi-door-open-fill"></i>
+                                </div>
+                                <h4>Puertas</h4>
+                                <p>
+                                    Instalamos, reparamos o reemplazamos puertas de pisos y locales comerciales como puertas de metal, 
+                                    puertas de madera, puertas de vidrio y puertas de aluminio, todas están hechas a medida.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Cajas fuertes -->
+                        <div class="col-md-6 animate-on-scroll" data-delay="600">
+                            <div class="servicio-adicional-card">
+                                <div class="servicio-adicional-icon">
+                                    <i class="bi bi-safe-fill"></i>
+                                </div>
+                                <h4>Cajas Fuertes</h4>
+                                <p>
+                                    Ofrecemos una amplia variedad de cajas fuertes, incluidas cajas fuertes de oficina/comercios, 
+                                    cajas fuertes para el hogar, cajas fuertes a prueba de fuego y cajas fuertes de depósito.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Sistemas de seguridad -->
+                        <div class="col-md-12 animate-on-scroll" data-delay="700">
+                            <div class="servicio-adicional-card servicio-destacado">
+                                <div class="servicio-adicional-icon">
+                                    <i class="bi bi-camera-video-fill"></i>
+                                </div>
+                                <h4>Sistemas de Seguridad</h4>
+                                <p>
+                                    Sistemas de control de acceso, cámaras de seguridad, CCTV, sistemas de intercomunicación y sistemas de alarma. 
+                                    Soluciones completas para la seguridad de tu hogar o negocio.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO SECTION - Formulario y información de contacto -->
+    <section id="contacto" class="contacto-section py-5">
+        <div class="container">
+            <!-- Título de sección -->
+            <div class="text-center mb-5 animate-on-scroll">
+                <span class="section-badge">Hablemos</span>
+                <h2 class="section-title mt-3">Contáctanos y Pide Presupuesto</h2>
+                <div class="section-divider mx-auto"></div>
+            </div>
+            
+            <div class="row g-5">
+                <!-- Información de contacto -->
+                <div class="col-lg-4 animate-on-scroll">
+                    <div class="contacto-info">
+                        <h3 class="mb-4">Información de Contacto</h3>
+                        
+                        <!-- Dirección -->
+                        <div class="contacto-item">
+                            <div class="contacto-icon">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <div class="contacto-content">
+                                <h5>Dirección</h5>
+                                <p>Calle Sáhara, 12<br>33208 Gijón, Asturias</p>
+                                <a href="https://www.google.com/maps/place/Cerrajeros+Sytec/@43.5318943,-5.663971,18z/data=!4m5!3m4!1s0x0:0x9f2126543f28f78c!8m2!3d43.5320617!4d-5.6636764?hl=es-ES" 
+                                   target="_blank" 
+                                   class="btn btn-sm btn-outline-primary mt-2">
+                                    <i class="bi bi-map me-2"></i>Ver en mapa
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Teléfono -->
+                        <div class="contacto-item">
+                            <div class="contacto-icon">
+                                <i class="bi bi-telephone-fill"></i>
+                            </div>
+                            <div class="contacto-content">
+                                <h5>Teléfono 24 horas</h5>
+                                <a href="tel:984397843" class="contacto-link">(+34) 984 397 843</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="contacto-item">
+                            <div class="contacto-icon">
+                                <i class="bi bi-envelope-fill"></i>
+                            </div>
+                            <div class="contacto-content">
+                                <h5>Email</h5>
+                                <a href="mailto:info@sytec.es" class="contacto-link">info@sytec.es</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Redes sociales -->
+                        <div class="contacto-item">
+                            <div class="contacto-icon">
+                                <i class="bi bi-facebook"></i>
+                            </div>
+                            <div class="contacto-content">
+                                <h5>Síguenos</h5>
+                                <a href="https://www.facebook.com/SYTEC-1626686167598105/" 
+                                   target="_blank" 
+                                   class="contacto-link">Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formulario de contacto -->
+                <div class="col-lg-8 animate-on-scroll">
+                    <div class="contacto-form-wrapper">
+                        <h3 class="mb-4">Envíanos un Mensaje</h3>
+                        <p class="text-muted mb-4">Rellene el siguiente formulario y nos pondremos en contacto con usted lo antes posible.</p>
+                        
+                        <form id="contactForm" class="contacto-form">
+                            <div class="row g-3">
+                                <!-- Nombre -->
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label">Tu nombre <span class="text-danger">*</span></label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           id="nombre" 
+                                           name="nombre" 
+                                           required>
+                                </div>
+                                
+                                <!-- Email -->
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Tu correo electrónico <span class="text-danger">*</span></label>
+                                    <input type="email" 
+                                           class="form-control" 
+                                           id="email" 
+                                           name="email" 
+                                           required>
+                                </div>
+                                
+                                <!-- Teléfono -->
+                                <div class="col-md-12">
+                                    <label for="telefono" class="form-label">Tu nº de teléfono <span class="text-danger">*</span></label>
+                                    <input type="tel" 
+                                           class="form-control" 
+                                           id="telefono" 
+                                           name="telefono" 
+                                           required>
+                                </div>
+                                
+                                <!-- Mensaje -->
+                                <div class="col-md-12">
+                                    <label for="mensaje" class="form-label">Tu mensaje</label>
+                                    <textarea class="form-control" 
+                                              id="mensaje" 
+                                              name="mensaje" 
+                                              rows="5"></textarea>
+                                </div>
+                                
+                                <!-- Botón enviar -->
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="bi bi-send-fill me-2"></i>Enviar mensaje
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                        <!-- Mensaje de éxito (oculto por defecto) -->
+                        <div id="formSuccess" class="alert alert-success mt-4 d-none" role="alert">
+                            <i class="bi bi-check-circle-fill me-2"></i>
+                            ¡Gracias por contactarnos! Te responderemos lo antes posible.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mapa de Google -->
+            <div class="row mt-5">
+                <div class="col-12 animate-on-scroll">
+                    <div class="mapa-wrapper">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1446.2912512684356!2d-5.664078308036255!3d43.531898173644706!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9f2126543f28f78c!2sCerrajeros%20Sytec!5e0!3m2!1ses!2ses!4v1583054869846!5m2!1ses!2ses" 
+                                width="100%" 
+                                height="450" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER - Moderno y limpio -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Logo y descripción -->
+                <div class="col-lg-4">
+                    <img src="https://www.sytec.es/wp-content/uploads/2020/02/sytec-alargao-pequeo-blanco.png" 
+                         alt="SYTEC Logo" 
+                         class="footer-logo mb-3">
+                    <p class="footer-text">
+                        Servicios profesionales de cerrajería 24 horas en Gijón, Oviedo y Avilés. 
+                        Tu seguridad es nuestra prioridad.
+                    </p>
+                    <div class="footer-social mt-3">
+                        <a href="https://www.facebook.com/SYTEC-1626686167598105/" 
+                           target="_blank" 
+                           class="social-link">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Enlaces rápidos -->
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Enlaces</h5>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#about">Empresa</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#urgencias">Urgencias</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Servicios -->
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="footer-title">Servicios</h5>
+                    <ul class="footer-links">
+                        <li><a href="#servicios">Domicilios</a></li>
+                        <li><a href="#servicios">Empresas</a></li>
+                        <li><a href="#servicios">Automoción</a></li>
+                        <li><a href="#servicios">Urgencias 24h</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contacto -->
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="footer-title">Contacto</h5>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="bi bi-geo-alt-fill me-2"></i>
+                            Calle Sáhara, 12<br>33208 Gijón
+                        </li>
+                        <li>
+                            <i class="bi bi-telephone-fill me-2"></i>
+                            <a href="tel:984397843">984 397 843</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope-fill me-2"></i>
+                            <a href="mailto:info@sytec.es">info@sytec.es</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer-bottom mt-5 pt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">&copy; 2025 SYTEC. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                        <p class="mb-0">
+                            Cerrajería profesional en Asturias
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp/Teléfono -->
+    <a href="tel:984397843" class="float-btn" id="floatBtn">
+        <i class="bi bi-telephone-fill"></i>
+    </a>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
