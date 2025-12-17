@@ -138,6 +138,25 @@ html {
   color: var(--bg-white);
 }
 
+/* ===== ESTILOS ESPECÍFICOS PÁGINA EMPRESA ===== */
+
+/* Hero para páginas internas - versión más compacta */
+.hero-section.hero-inner {
+  min-height: 50vh;
+}
+
+.hero-section .breadcrumb {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-section .breadcrumb-item + .breadcrumb-item::before {
+  content: "›";
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.2rem;
+}
+
 /* Imagen de fondo del hero */
 .hero-bg {
   position: absolute;
@@ -985,109 +1004,6 @@ section {
 
 /* Tablets */
 @media (max-width: 991px) {
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .navbar-collapse {
-    background: rgba(29, 53, 87, 0.98);
-    padding: 1rem;
-    border-radius: 12px;
-    margin-top: 1rem;
-  }
-
-  .marcas-grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1.5rem;
-  }
-}
-
-/* Móviles */
-@media (max-width: 767px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-
-  .hero-cta .btn {
-    padding: 0.875rem 2rem;
-    font-size: 1rem;
-  }
-
-  .section-title {
-    font-size: 1.75rem;
-  }
-
-  .service-card,
-  .intro-card,
-  .contacto-form-wrapper,
-  .contacto-info {
-    padding: 1.75rem;
-  }
-
-  .urgencias-card {
-    padding: 2rem;
-    text-align: center;
-  }
-
-  .float-btn {
-    width: 55px;
-    height: 55px;
-    bottom: 1.5rem;
-    right: 1.5rem;
-  }
-
-  .marcas-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-}
-
-/* Móviles pequeños */
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 1.75rem;
-  }
-
-  .section-badge {
-    font-size: 0.75rem;
-    padding: 0.4rem 1rem;
-  }
-
-  .service-icon,
-  .intro-icon {
-    width: 60px;
-    height: 60px;
-  }
-
-  .service-icon i,
-  .intro-icon i {
-    font-size: 1.8rem;
-  }
-}
-
-/* ===== UTILIDADES Y MEJORAS ===== */
-
-/* Mejora de rendimiento para animaciones */
-.service-card,
-.intro-card,
-.marca-item,
-.servicio-adicional-card {
-  will-change: transform;
-}
-
-/* Print styles */
-@media print {
-  .navbar,
-  .float-btn,
-  .scroll-indicator {
-    display: none;
-  }
+  /* The original code ended abruptly here, causing a parse error.
+     No specific updates were provided for this media query, so it's closed to fix the syntax. */
 }

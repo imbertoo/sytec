@@ -2,8 +2,46 @@
 // SYTEC - JavaScript para interactividad moderna
 // =====================================================
 
+// Throttle: Limita la ejecución de una función a intervalos específicos
+function throttle(func, delay) {
+  let lastCall = 0
+  return (...args) => {
+    const now = new Date().getTime()
+    if (now - lastCall < delay) return
+    lastCall = now
+    return func(...args)
+  }
+}
+
+// RequestAnimationFrame optimizado para smooth animations
+function rafThrottle(callback) {
+  let requestId = null
+  let lastArgs
+
+  const later = (context) => () => {
+    requestId = null
+    callback.apply(context, lastArgs)
+  }
+
+  const throttled = function (...args) {
+    lastArgs = args
+    if (requestId === null) {
+      requestId = requestAnimationFrame(later(this))
+    }
+  }
+
+  throttled.cancel = () => {
+    cancelAnimationFrame(requestId)
+    requestId = null
+  }
+
+  return throttled
+}
+
 // Esperar a que el DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", () => {
+  document.documentElement.style.scrollBehavior = "smooth"
+
   // ===== INICIALIZAR INTERSECTION OBSERVER PARA ANIMACIONES =====
   const animateOnScroll = () => {
     const elements = document.querySelectorAll(".fade-in-up, .animate-on-scroll")
@@ -33,11 +71,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Inicializar animaciones
   animateOnScroll()
 
-  // ===== NAVEGACIÓN STICKY CON EFECTO AL SCROLL =====
+  // ===== NAVEGACIÓN STICKY CON EFECTO AL SCROLL (OPTIMIZADO) =====
   const navbar = document.getElementById("mainNav")
   let lastScroll = 0
 
-  window.addEventListener("scroll", () => {
+  const handleNavbarScroll = rafThrottle(() => {
     const currentScroll = window.pageYOffset
 
     // Agregar clase 'scrolled' cuando se hace scroll
@@ -47,8 +85,18 @@ document.addEventListener("DOMContentLoaded", () => {
       navbar.classList.remove("scrolled")
     }
 
+    if (currentScroll > lastScroll && currentScroll > 300) {
+      // Scrolling down - esconder navbar
+      navbar.style.transform = "translateY(-100%)"
+    } else {
+      // Scrolling up - mostrar navbar
+      navbar.style.transform = "translateY(0)"
+    }
+
     lastScroll = currentScroll
   })
+
+  window.addEventListener("scroll", handleNavbarScroll, { passive: true })
 
   // ===== SMOOTH SCROLL PARA ENLACES DE NAVEGACIÓN =====
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -80,11 +128,11 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // ===== MARCAR LINK ACTIVO EN NAVEGACIÓN =====
+  // ===== MARCAR LINK ACTIVO EN NAVEGACIÓN (OPTIMIZADO) =====
   const sections = document.querySelectorAll("section[id]")
   const navLinks = document.querySelectorAll(".navbar-nav .nav-link")
 
-  function highlightNavigation() {
+  const highlightNavigation = throttle(() => {
     const scrollY = window.pageYOffset
 
     sections.forEach((section) => {
@@ -101,9 +149,9 @@ document.addEventListener("DOMContentLoaded", () => {
         })
       }
     })
-  }
+  }, 100)
 
-  window.addEventListener("scroll", highlightNavigation)
+  window.addEventListener("scroll", highlightNavigation, { passive: true })
 
   // ===== MANEJO DEL FORMULARIO DE CONTACTO =====
   const contactForm = document.getElementById("contactForm")
@@ -190,25 +238,30 @@ document.addEventListener("DOMContentLoaded", () => {
     imageObserver.observe(img)
   })
 
-  // ===== BOTÓN FLOTANTE CON EFECTO DE APARICIÓN =====
+  // ===== BOTÓN FLOTANTE CON EFECTO DE APARICIÓN (OPTIMIZADO) =====
   const floatBtn = document.getElementById("floatBtn")
 
   if (floatBtn) {
-    window.addEventListener("scroll", () => {
+    const handleFloatBtnScroll = rafThrottle(() => {
       if (window.pageYOffset > 500) {
         floatBtn.style.opacity = "1"
         floatBtn.style.pointerEvents = "all"
+        floatBtn.style.transform = "scale(1)"
       } else {
         floatBtn.style.opacity = "0"
         floatBtn.style.pointerEvents = "none"
+        floatBtn.style.transform = "scale(0.8)"
       }
     })
 
+    window.addEventListener("scroll", handleFloatBtnScroll, { passive: true })
+
     // Estado inicial
-    floatBtn.style.transition = "opacity 0.3s ease"
+    floatBtn.style.transition = "opacity 0.3s ease, transform 0.3s ease"
     if (window.pageYOffset <= 500) {
       floatBtn.style.opacity = "0"
       floatBtn.style.pointerEvents = "none"
+      floatBtn.style.transform = "scale(0.8)"
     }
   }
 
@@ -224,20 +277,88 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 
-  // ===== EFECTO PARALLAX SUTIL EN HERO =====
+  // ===== EFECTO PARALLAX SUTIL EN HERO (OPTIMIZADO) =====
   const heroBg = document.querySelector(".hero-bg")
   if (heroBg) {
-    window.addEventListener("scroll", () => {
+    const handleParallax = rafThrottle(() => {
       const scrolled = window.pageYOffset
       const parallaxSpeed = 0.5
       heroBg.style.transform = `translateY(${scrolled * parallaxSpeed}px)`
     })
+
+    window.addEventListener("scroll", handleParallax, { passive: true })
+  }
+
+  const preloadImages = () => {
+    const criticalImages = document.querySelectorAll('img[loading="eager"]')
+    criticalImages.forEach((img) => {
+      if (img.dataset.src) {
+        img.src = img.dataset.src
+      }
+    })
+  }
+  preloadImages()
+
+  const scrollToTopButtons = document.querySelectorAll('[href="#top"], [href="#"]')
+  scrollToTopButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      if (button.getAttribute("href") === "#" || button.getAttribute("href") === "#top") {
+        e.preventDefault()
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        })
+      }
+    })
+  })
+
+  // ===== AÑADIR CONTADOR ANIMADO PARA ESTADÍSTICAS EN PÁGINA EMPRESA =====
+  const animateCounters = () => {
+    const counters = document.querySelectorAll(".stat-number")
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const counter = entry.target
+            const target = Number.parseInt(counter.getAttribute("data-target"))
+            const duration = 2000
+            const increment = target / (duration / 16)
+            let current = 0
+
+            const updateCounter = () => {
+              current += increment
+              if (current < target) {
+                counter.textContent = Math.floor(current).toLocaleString()
+                requestAnimationFrame(updateCounter)
+              } else {
+                counter.textContent = target.toLocaleString() + "+"
+              }
+            }
+
+            updateCounter()
+            observer.unobserve(counter)
+          }
+        })
+      },
+      {
+        threshold: 0.5,
+      },
+    )
+
+    counters.forEach((counter) => observer.observe(counter))
+  }
+
+  // Inicializar contadores si existen
+  if (document.querySelector(".stat-number")) {
+    animateCounters()
   }
 
   // ===== LOG DE INICIALIZACIÓN =====
   console.log("🔒 SYTEC Website initialized successfully!")
   console.log("📱 Mobile-first design active")
   console.log("✨ All animations loaded with native Intersection Observer")
+  console.log("⚡ Performance optimizations: throttle, RAF, passive listeners")
 })
 
 // ===== MANEJO DE ERRORES GLOBAL =====
